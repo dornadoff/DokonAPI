@@ -10,7 +10,7 @@ class BolimlarAPIVIew(APIView):
         serializer = BolimSerializer(bolim, many=True)
         return Response(serializer.data)
 
-class BittaMahsulotAPIView(APIView):
+class BolimMahsulotAPIView(APIView):
     def get(self, request, pk):
         mahsulot = Mahsulot.objects.filter(bolim__id=pk)
         serializer = MahsulotSerializer(mahsulot, many=True)

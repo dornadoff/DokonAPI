@@ -3,7 +3,7 @@ from userapp.models import *
 
 class Bolim(models.Model):
     nom = models.CharField(max_length=100)
-    rams = models.FileField(null=True, blank=True)
+    rasm = models.FileField(null=True, blank=True)
 
 class Mahsulot(models.Model):
     nom = models.CharField(max_length=100)
