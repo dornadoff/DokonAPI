@@ -22,3 +22,4 @@ class Izoh(models.Model):
     reyting = models.FloatField()
     mahsulot = models.ForeignKey(Mahsulot, on_delete=models.CASCADE)
     sana = models.DateField()
+

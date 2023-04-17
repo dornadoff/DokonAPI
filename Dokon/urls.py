@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from asosiy.views import *
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +26,7 @@ urlpatterns = [
     # path('bolim/<int:pk>/mahsulotlar/', BittaMahsulotAPIView.as_view()),
     # path('chegirmalar/', ChegirmalarAPIView.as_view()),
     # path("mahsulot/<int:pk>/izohlar/", IzohAPIView.as_view())
-    path("bolim/", include('asosiy.urls'))
+    path("bolim/", include('asosiy.urls')),
+    path("user/", include("userapp.urls")),
+    path("buyurtma/", include("buyurtma.urls"))
 ]
